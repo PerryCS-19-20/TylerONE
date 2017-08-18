@@ -8,6 +8,7 @@
           color:white;
           background-color:black;
           font-size:40px;
+          text-align:center;
         }
         .ALERT
         {
@@ -34,7 +35,7 @@
         }
         h1 {
 	        display: inline;
-	        position: relative;
+	        position: center;
 	        font: 150px Helvetica, Sans-Serif;
 	        color: rgba(250,250,250,0.5); 
             }
@@ -68,7 +69,41 @@
             color:white;
             font-size:30px;
         }
+        h2
+        {
+            text-align:center;
+        }
       </style>
+      <script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 21, 2017 15:46:00").getTime();
+
+// Update the count down every 1 second
+var x = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = countDownDate - now;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Display the result in the element with id="timer"
+  document.getElementById("timer").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is finished, write some text 
+  if (distance < 0) {
+    clearInterval(x);
+    document.getElementById("timer").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
       
     </head>
     <body>
@@ -79,6 +114,13 @@
       <h3 class="subheader">About the Eclipse</h3>
       <p class="gradient" style=font-size:30px;> On Monday, August 21, 2017, all of North America will be treated to an eclipse of the sun. Anyone within the path of totality can see one of nature’s most awe-inspiring sights - a total solar eclipse. This path, where the moon will completely cover the sun and the sun's tenuous atmosphere - the corona - can be seen, will stretch from Lincoln Beach, Oregon to Charleston, South Carolina. Observers outside this path will still see a partial solar eclipse where the moon covers part of the sun's disk. Everyone in North America plus parts of South America, Africa, and Europe will see at least a partial solar eclipse, while the thin path of totality will pass through portions of 14 states. This celestial event is a solar eclipse in which the moon passes between the sun and Earth and blocks all or part of the sun for up to about three hours, from beginning to end, as viewed from a given location.  For this eclipse, the longest period when the moon completely blocks the sun from any given location along the path will be about two minutes and 40 seconds. The last time the contiguous U.S. saw a total eclipse was in 1979, but people will be able to see it on August 22nd 2017!You can see a partial eclipse, where the moon covers only a part of the sun, anywhere in North America. To see a total eclipse, where the moon fully covers the sun for a short few minutes, you must be in the path of totality. The path of totality is a relatively thin ribbon, around 70 miles wide, that will cross the U.S. from West to East.  The first point of contact will be at Lincoln Beach, Oregon at 9:05 a.m. PDT. Totality begins there at 10:16 a.m. PDT.  Over the next hour and a half, it will cross through Oregon, Idaho, Wyoming, Montana, Nebraska, Iowa, Kansas, Missouri, Illinois, Kentucky, Tennessee, Georgia, and North and South Carolina.  The total eclipse will end near Charleston, South Carolina at 2:48 p.m. EDT.  From there the lunar shadow leaves the United States at 4:09 EDT.  Its longest duration will be near Carbondale, Illinois, where the sun will be completely covered for two minutes and 40 seconds. You never want to look directly at the sun without appropriate protection except during totality.  That could severely hurt your eyes.  However, there are many ways to safely view an eclipse of the sun including direct viewing – which requires some type of filtering device and indirect viewing where you project an image of the sun onto a screen. Both methods should produce clear images of the partial phase of an eclipse.</p>
       <br>
+      <p class="gradient" style=font-size:30px;>For more information, please go to this link:<a href="https://www.space.com/33797-total-solar-eclipse-2017-guide.html" target="_blank">Here</a></p>
+      <br>
+      <hr>
+      <h2 style="font-size:70px; color:red;">Live Timer Until Eclipse Starts</h2>
+      <h2 id="timer" style="color:cyan; font-size:100px;"></h2>
+      <iframe src="https://player.twitch.tv/?stream=26045051120&channelId=151920918&autoplay=false" frameborder="0" allowfullscreen="true" scrolling="no" height="500" width="100%"></iframe><a href="https://www.twitch.tv/streams/26045051120/channel/151920918" style="padding:2px 0px 4px; display:block; width:345px; font-weight:normal; font-size:10px; text-decoration:underline;">Watch The Live Stream Here!!!</a>
+      <hr>
       <h2 class="Solar">Here is a chart for times of Total Eclpises</h2>
       <hr>
       <img src="https://eclipse2017.nasa.gov/sites/default/files/Table%201.png" alt="eclipse"> 
@@ -113,6 +155,16 @@
               </tr>
           </tbody>
       </table>
+      <p class="gradient" style="font-size:30px; align:center;">For more information please click <a href="https://www.exploratorium.edu/eclipse/how-to-view-eclipse" target="_blank">Here</a></p>
+      <hr>
+      <h2 class="Solar">More about Projection</h2>
+      <br>
+      <img src="https://eclipse.aas.org/sites/eclipse.aas.org/files/Waffle-Fingers_RTF_512x323.gif">
+      <br>
+      <p class="gradient" style="font-size:30px;"> A convenient method for safe viewing of the partially eclipsed Sun is pinhole projection. You simply pass sunlight through a small opening (for example, a hole punched in an index card) and project an image of the Sun onto a nearby surface (for example, another card, a wall, or the ground).
+You don't need any special equipment to do this! Just cross the outstretched, slightly open fingers of one hand over the outstretched, slightly open fingers of the other. Then, with your back to the Sun, look at your hands’ shadow on the ground. The little spaces between your fingers will project a grid of small images on the ground. During the partial phases of the solar eclipse, these images will reveal the Sun's crescent shape, as shown in the accompanying photo.
+If your observing site has trees, look at the shadows of leaves on the ground. During the partial solar eclipse, the tiny spaces between the leaves will act as pinhole projectors, dappling the ground with images of the crescent Sun!
+Note that pinhole projection does not mean looking at the Sun through a pinhole! You project sunlight through the hole onto a surface and look at the solar image on the surface. Note too that pinhole projection is not useful for observing the total phase of a total solar eclipse; the projected image would be too faint to see. During totality, when it suddenly gets very dark, it is perfectly safe to look directly at the eclipsed Sun.</p>
       <hr>
       <h2 class="subheader">Quick checklist</h2>
       <br>
@@ -120,6 +172,7 @@
       <ol>
           <li>Check the time</li>
             <ul>
+                <li>To make sure you didn't miss the eclipse</li>
                 <li>This depends on where you live</li>
                 <li>This also affects what you will see</li>
             </ul>
@@ -127,17 +180,17 @@
             <ul>
               <li>This can include things like glasses</li>
               <li>Telescope with white light lenses</li>
-              <li>Or a himemade projector</li>
+              <li>Or a homemade projector</li>
             </ul>
           <li>Go outside</li>
           <ul>
-              <li>Prefferably an open area</li>
+              <li>Preferably an open area</li>
           </ul>
           <li>Look up</li>
           <li>Enjoy the Solar Eclpise</li>
           <ul>
               <li>Note that if you are in a place with total coverage, you can actually take off your solar gear during the total eclipse</li>
-              <li>However you MUST put it back on immediately after to keep your eyes unharmed</li>
+              <li>However, you MUST put it back on immediately after to keep your eyes unharmed</li>
           </ul>
       </ol>
     </body>
