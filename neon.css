@@ -8,7 +8,7 @@
 .neon {
   text-align:center;
   position: center;
-  background-image: url("https://media.giphy.com/media/l41YAxbCF8LMsO0JG/giphy.gif");
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAARwAAACxCAMAAAAh3/JWAAAAA1BMVEUIAKqfaiaUAAAASElEQVR4nO3BMQEAAADCoPVPbQ0PoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIALA8UNAAFusnLHAAAAAElFTkSuQmCC");
   color: transparent;
 }
 .neon::before, .neon::after {
