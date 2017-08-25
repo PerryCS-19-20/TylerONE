@@ -7,7 +7,6 @@
 
 .neon {
   position: center;
-  background-image: url("https://media.giphy.com/media/UYBDCJjwOd9Re/giphy.gif");
   color: transparent;
 }
 .neon::before, .neon::after {
