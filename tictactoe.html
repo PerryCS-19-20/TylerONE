@@ -9,13 +9,21 @@
     </style>
         <style>
             td {
-                color:green;
+                color:orange;
                 font-size: 200px;
                 height: 300px;
                 width: 300px;
             }
+           h1{
+             font-size: 90px;
+             color:red;
+             }
         </style>
   </head>
+  <body>
+        <center>
+                <h1>TIC-TAC-TOE</h1>
+                <br>
         <table border="1">
             <tbody><tr>
                 <td id="1" onclick="play('1');"></td>
@@ -32,7 +40,7 @@
                 <td id="8" onclick="play('8');"></td>
                 <td id="9" onclick="play('9');"></td>
             </tr>
-        </tbody></table>
+                </tbody></table></center>
         <script>
             var player = "X";
         function play(cellId) {
