@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>Freedom tictactoe</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script>src="sitemap.js";</script>
+        <style>
+        body {
+            background-color: red;
+        }
+    </style>
+        <style>
+            
+            td {
+                font-size: 200px;
+                height: 300px;
+                width: 300px;
+            }
+        </style>
+        
+    <link rel="stylesheet" type="text/css" href="menu.css">
+        <script src="sitemap.js"></script>
+  </head>
+  <body onload="buildMap('sitemapWrapper');">
+      <div id="sitemapWrapper"><ul><li><a href="index.html">Home</a></li><li><a href="bio.html">Bio</a></li><li>Class Projects<ul><li><a href="breakout.html">Breakout</a></li><li><a href="htmltest.html">Javascript Events</a></li><li><a href="popup.html">Pop-up</a></li><li><a href="todolist.html">To Do List</a></li><li><a href="chalkboard.html">Chalkboard</a></li><li><a href="tictactoe.html">Tic Tac Toe</a></li><li><a href="table.html">Multiplication</a></li><li><a href="multiplicationtable.html">More Multiplication</a></li><li><a href="calculator.html">Calculator</a></li></ul></li></ul></div>
+        <table border="1">
+            <tbody><tr>
+                <td id="1" onclick="play('1');"></td>
+                <td id="2" onclick="play('2');"></td>
+                <td id="3" onclick="play('3');"></td>
+            </tr>
+            <tr>
+                <td id="4" onclick="play('4');"></td>
+                <td id="5" onclick="play('5');"></td>
+                <td id="6" onclick="play('6');"></td>
+            </tr>
+            <tr>
+                <td id="7" onclick="play('7');"></td>
+                <td id="8" onclick="play('8');"></td>
+                <td id="9" onclick="play('9');"></td>
+            </tr>
+        </tbody></table>
+        <script>
+            var player = "X";
+        function play(cellId) {
+           var cell = document.getElementById(cellId);
+            if(cell.textContent === "") {
+                cell.textContent = player;
+                checkWin();
+            }
+            if(player === "X"){
+                player = "O";
+            }else {
+                player = "X";          
+            }
+        }
+        function checkWin() {
+            check3Cells("1","2","3");
+            check3Cells("4","5","6");
+            check3Cells("7","8","9");
+            check3Cells("1","4","7");
+            check3Cells("2","5","8");
+            check3Cells("3","6","9");
+            check3Cells("1","5","9");
+            check3Cells("3","5","7");
+        }
+        function check3Cells(c1id,c2id,c3id){
+            var c1 = document.getElementById(c1id);
+            var c2 = document.getElementById(c2id);
+            var c3 = document.getElementById(c3id);
+            if((c1.textContent === c2.textContent) && (c2.textContent === c3.textContent) && (c1.textContent !== "")) {
+                won = true;
+                c1.style.backgroundImage= "url(images.jpg)";
+                c2.style.backgroundImage= "url(images.jpg)";
+                c3.style.backgroundImage= "url(images.jpg)";
+            }
+        }
+        </script>
+    
+
+</body>
+</html>
